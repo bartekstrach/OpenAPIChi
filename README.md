@@ -5,6 +5,7 @@ This project shows how to generate code from provided [OpenAPI 3 specification](
 
 ## Setup project
 
+0. Clone project
 1. Import oapi-codegen
 ```bash
 go get github.com/deepmap/oapi-codegen/cmd/oapi-codegen
