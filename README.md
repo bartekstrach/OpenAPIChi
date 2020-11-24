@@ -3,18 +3,27 @@
 This project shows how to generate code from provided [OpenAPI 3 specification](https://swagger.io/specification/). More examples and documentation at [oapi-codegen](https://github.com/deepmap/oapi-codegen). You can display provided API in [the online Swagger UI editor](https://editor.swagger.io/).
 
 
-## Setup project
+## Run project
+1. Clone project
+2. Build project
+```bash
+go build .
+```
+3. Run generated *.exe file
 
-0. Clone project
-1. Import oapi-codegen
+
+## Setup similar project
+
+1. Initialize go project
+2. Import oapi-codegen
 ```bash
 go get github.com/deepmap/oapi-codegen/cmd/oapi-codegen
 ```
-2. Create API directory (optional, feel free to store it wherever you want, remember to use proper oapi-codegen commands)
+3. Create API directory (optional, feel free to store it wherever you want, remember to use proper oapi-codegen commands)
 ```bash
 mkdir api
 ```
-3. Generate code
+4. Generate code
 ```bash
 # GENERATE 'ALL-IN-ONE'
 oapi-codegen --package api ./store-api.yaml > api/store.gen.go
@@ -27,7 +36,8 @@ oapi-codegen --config=server.cfg.yaml ./store-api.yaml
 oapi-codegen --package api --generate types ./store-api.yaml > api/store-types.gen.go
 oapi-codegen --package api --generate chi-server ./store-api.yaml > api/store-server.gen.go
 ```
-4. Build & run project
+5. Build & run project
+
 
 ## Generate changes without manual corrections
 
