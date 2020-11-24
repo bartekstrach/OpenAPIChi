@@ -26,10 +26,11 @@ oapi-codegen --config=server.cfg.yaml ./store-api.yaml
 oapi-codegen --package api --generate types ./store-api.yaml > api/store-types.gen.go
 oapi-codegen --package api --generate chi-server ./store-api.yaml > api/store-server.gen.go
 ```
+4. Build & run project
 
 ## Generate changes without manual corrections
 
-1. Open store-api.yaml file
+1. Open [store-api.yaml](https://github.com/bartekstrach/OpenAPIChi/blob/master/store-api.yaml) file
 2. Uncomment lines 147-149
 ```yaml
 age:
@@ -42,7 +43,7 @@ oapi-codegen --config=types.cfg.yaml ./store-api.yaml
 # OR
 oapi-codegen --package api --generate types ./store-api.yaml > api/store-types.gen.go
 ```
-4. Adjust business logic - open store.go
+4. Adjust business logic - open [store.go](https://github.com/bartekstrach/OpenAPIChi/blob/master/api/store.go) file
 5. Uncomment line 86
 ```go
 pet.Age = newPet.Age
