@@ -1,0 +1,5 @@
+output:
+  api/server.gen.go
+generate:
+  - chi-server
+package: api
